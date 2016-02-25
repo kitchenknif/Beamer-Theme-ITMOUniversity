@@ -3,12 +3,14 @@
 
 \usepackage{blindtext}
 
-\usetheme{Execushares}
+\usetheme{ITMOUniversity}
 
-\title{A New Beamer Theme That Works Well and Looks Great: Execushares}
-\subtitle{A custom modern minimalist Beamer theme designed from scratch}
-\author{Kenton Hamaluik}
-\date{June 1, 2014}
+
+
+\title{A New Beamer Theme That Works Well and Looks Great: ITMO University}
+\subtitle{Based on Execushares by Kenton Hamaluik}
+\author{Pavel Dmitriev}
+\date{February 25, 2016}
 
 \setcounter{showSlideNumbers}{1}
 
@@ -16,21 +18,32 @@
 	\setcounter{showProgressBar}{0}
 	\setcounter{showSlideNumbers}{0}
 
-	\frame{\titlepage}
+	\frame{
+		\titlepage
+			
+		\begin{tikzpicture}
+			% set up the entire slide as the canvas
+			\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+			% ITMO logo2
+			\node[anchor=north west,text width=\slidewidth-1cm,inner xsep=0.5cm] at (0.2\paperwidth,\paperheight-0.25cm) {\includegraphics[width=0.3\paperwidth]{logo/itmo_white.eps}};
+			% ITMO logo3
+			\node[anchor=north west,text width=\slidewidth-1cm,inner xsep=0.5cm] at (0.5\paperwidth,\paperheight-0.25cm) {\includegraphics[width=0.3\paperwidth]{logo/itmo_white.eps}};
+		\end{tikzpicture}
+	}
 
 	\begin{frame}
 		\frametitle{Contents}
 		\begin{enumerate}
-			\item Introduction \\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em} The reasoning and background behind this theme}
-			\item Lorem Text  \\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em} Just some Lorem Ipsum for filler}
-			\item Conclusions \\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em} Some closing thoughts}
+			\item Introduction \\ \textcolor{StyleGrey}{\footnotesize\hspace{1em} The reasoning and background behind this theme}
+			\item Lorem Text  \\ \textcolor{StyleGrey}{\footnotesize\hspace{1em} Just some Lorem Ipsum for filler}
+			\item Conclusions \\ \textcolor{StyleGrey}{\footnotesize\hspace{1em} Some closing thoughts}
 		\end{enumerate}
 	\end{frame}
-
+	
 	\setcounter{framenumber}{0}
 	\setcounter{showProgressBar}{1}
 	\setcounter{showSlideNumbers}{1}
-	\section{Introduction}
+%	\section{Introduction}
 		\begin{frame}
 			\frametitle{Why Beamer?}
 			\begin{enumerate}
@@ -49,9 +62,9 @@
 			\end{itemize}
 		\end{frame}
 
-	\section{Lorem Ipsum}
+%	\section{Lorem Ipsum}
 		\begin{frame}
-			\frametitle{Lorem 1}
+			\frametitle{Booo, Long Lorem Covers Logo}
 			\blindtext
 		\end{frame}
 
@@ -65,12 +78,26 @@
 			\blindtext
 		\end{frame}
 
-	\section{Conclusions}
+%	\section{Conclusions}
 		\begin{frame}
 			\frametitle{Closing Thoughts}
 			\begin{itemize}
 				\item Woo, Beamer!
 			\end{itemize}
 		\end{frame}
+	
+	\setcounter{showProgressBar}{0}
+	\setcounter{showSlideNumbers}{0}		
+	\setcounter{showSlideTotal}{0}
+%	\section{Appendix}
+			\begin{frame}
+				\frametitle{No progress bar}
+				\begin{itemize}
+					\item Woo, Beamer!
+				\end{itemize}
+			\end{frame}
+
+	% Boo-hoo have to do it by hand :(
+	\setcounter{framenumber}{6}
 
 \end{document}
