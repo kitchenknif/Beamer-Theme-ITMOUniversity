@@ -121,12 +121,14 @@
 			%\node[anchor=north west,text width=\slidewidth-1cm,inner xsep=1pt] (itmo-logo) at (-0.4cm,\paperheight) {\includegraphics[width=3.8cm]{logo/itmo_white.eps}};
 			
 			% draw the actual text
-			\node[anchor=south,text width=\slidewidth-1cm,inner xsep=0.5cm,align=left] at (0.5\slidewidth,4cm) {\color{StyleBlue}\Huge\textbf{\inserttitle}};
+			\node[anchor=south west,text width=\slidewidth-1cm,align=left] at (0.05\slidewidth,4cm) {\color{StyleBlue}\Huge\textbf{\inserttitle}};
 			
-			\node[anchor=north east,text width=\slidewidth-1cm,align=center] at (\slidewidth-0.4cm,4cm) {\color{StyleBlack}\small\insertsubtitle};
+			\node[anchor=north west,text width=\slidewidth-1cm,align=left] at (0.05\slidewidth,4cm) {\color{StyleBlack}\small\insertsubtitle};
 			
-			\node[above] at(0.5\slidewidth,2.3cm) {\color{StyleBlack}\tiny by};
-			\node at (0.5\slidewidth,2cm) {\color{StyleBlack}\LARGE\insertauthor};
+			%\node[above] at (0.5\slidewidth,3cm) {\color{StyleBlack}\tiny by};
+			\node[anchor=north] (author) at (0.5\slidewidth,3.5cm) {\color{StyleBlack}\LARGE\insertauthor};
+
+			\node[below, anchor=north west] at (0.05\slidewidth,2.2cm) {\small\insertinstitute};
 
 			% add the date in the corner
 			\node[anchor=south east] at(\slidewidth,0cm) {\color{StyleGrey}\tiny\insertdate};
